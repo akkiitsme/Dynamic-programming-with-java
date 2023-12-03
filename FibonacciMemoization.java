@@ -7,8 +7,8 @@ public class FibonacciMemoization {
 	public static int fibonacci(int n,int[] qb) {
 		if(n==0||n==1)
 			return n;		
-		if(qb[n]==n) {
-			return n;
+		if(qb[n]!=0) {
+			return qb[n];
 		}
 		int fibno = fibonacci(n-1,qb)+fibonacci(n-2,qb);	
 		qb[n]=fibno;
