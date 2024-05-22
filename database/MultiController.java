@@ -49,6 +49,8 @@ public class MultiController {
         System.out.println("countryList: "+countryList.size());
        // System.out.println(multiDbManager.getTenantList());
 
+        //Remember when switch to other db use   jpa: open-in-view: false in application.yml
+
         multiDbManager.setCurrentTenant("Client");
 
         List<CountryBean> countryList2 = countryDao.findAll();
